@@ -23,6 +23,7 @@ RUN apt-get update && \
             libjpeg62-turbo-dev \
             libmagickwand-dev \
             libpq-dev \
+            libonig-dev \
             libpng-dev \
             libxml2-dev \
             libzip-dev \
@@ -70,7 +71,7 @@ RUN printf "\n" | pecl install \
 RUN cd /tmp && \
     git clone git://github.com/xdebug/xdebug.git && \
     cd xdebug && \
-    git checkout 2.7.0beta1 && \
+    git checkout 2.8.0alpha1 && \
     phpize && \
     ./configure --enable-xdebug && \
     make && \
